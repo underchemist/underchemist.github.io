@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Nanonispy: My fist python package</title>
+
+            <link href="http://ysebastien.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ysebastien.me Full Atom Feed" />
+            <link href="http://ysebastien.me/feeds/articles.atom.xml" type="application/atom+xml" rel="alternate" title="ysebastien.me Categories Atom Feed" />
+        <!-- Bootstrap Core CSS -->
+        <link href="http://ysebastien.me/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="http://ysebastien.me/theme/css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="http://ysebastien.me/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+        <!-- Custom Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+        <meta name="description" content="nanonispy is a small library written in python 3. It came about by needing to do some quasiparticle interference (QPI) analysis on STM...">
+
+        <meta name="author" content="Yann-Sebastien">
+
+        <meta name="tags" content="python">
+
+	                <meta property="og:locale" content="">
+		<meta property="og:site_name" content="ysebastien.me">
+
+	<meta property="og:type" content="article">
+            <meta property="article:author" content="http://ysebastien.me/author/yann-sebastien.html">
+	<meta property="og:url" content="http://ysebastien.me/nanonispy-my-first-python-package.html">
+	<meta property="og:title" content="Nanonispy: My fist python package">
+	<meta property="article:published_time" content="2015-12-28 14:33:00-08:00">
+            <meta property="og:description" content="nanonispy is a small library written in python 3. It came about by needing to do some quasiparticle interference (QPI) analysis on STM...">
+
+            <meta property="og:image" content="http://ysebastien.me/images/header.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@underchemist">
+        <meta name="twitter:title" content="Nanonispy: My fist python package">
+
+            <meta name="twitter:image" content="http://ysebastien.me/images/header.jpg">
+
+            <meta name="twitter:description" content="nanonispy is a small library written in python 3. It came about by needing to do some quasiparticle interference (QPI) analysis on STM...">
+    <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://ysebastien.me/">ysebastien.me</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a href="tags.html">tags</a></li>
+                        <li><a href="archives.html">archives</a></li>
+
+                            <li><a href="http://ysebastien.me/pages/about-me.html">About me</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('images/header.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Nanonispy: My fist python package</h1>
+                        <span class="meta">Posted by
+                                <a href="http://ysebastien.me/author/yann-sebastien.html">Yann-Sebastien</a>
+                             on Mon 28 December 2015
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p><a class="reference external" href="https://travis-ci.org/underchemist/nanonispy"><img alt="Build Status" src="https://travis-ci.org/underchemist/nanonispy.svg?branch=master" /></a>  <a class="reference external" href="https://coveralls.io/github/underchemist/nanonispy?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/underchemist/nanonispy/badge.svg?branch=master&amp;service=github" /></a>  <a class="reference external" href="https://anaconda.org/underchemist/nanonispy/badges/installer/conda.svg"><object data="https://anaconda.org/underchemist/nanonispy/badges/installer/conda.svg" type="image/svg+xml">Install with conda</object></a></p>
+<p>First of all this will be only of use to those that use an STM with a Nanonis hardware/software. Also since this is a python package, you should probably be using python for data analysis.</p>
+<p><code>nanonispy</code> is a small library written in python 3. It came about by needing to do some quasiparticle interference (QPI) analysis on STM grids. Nanonis saves the data in binary files, which need to be unpacked into <code>numpy</code> arrays for further processing. I had written a version of this that was a bit more hardcoded with the analysis code so I decided to try and refactor this into a more general library, and get some experience making a nice clean python library. I don't know if I've achieved that but that's why you practice. The code is unit tested, with ~ 100% coverage although I don't know that the tests are all that good. However it does mean that should you need to change things for your needs, it should be relatively easy to troubleshoot if errors do come up.</p>
+<hr class="docutils" />
+<div class="section" id="things-it-can-do">
+<h2>Things it can do</h2>
+<ul class="simple">
+<li>Read Nanonis generated grid, scan, or point spectroscopy files ('.3ds', '.sxm', and '.dat' files, respectively).</li>
+<li>Parse the header for each file and store each entry into a dict for easy retrieval during post-processing.</li>
+<li>Read the binary data in, appropriately shaped, for each channel into <code>numpy</code> arrays.</li>
+<li>Since each channel is just a numpy array, you're able to save each in a '.npy' binary format for easy figure generation after some post-processing.</li>
+</ul>
+</div>
+<div class="section" id="things-it-cannot-do">
+<h2>Things it cannot do</h2>
+<ul class="simple">
+<li>Handle incomplete or non-square datasets.</li>
+<li>Apply image correction techniques like flattening.</li>
+<li>Handle memory management. If you need to process a lot of grid data (200-300+ MB a pop), keep in mind that you may fill up your RAM quite quickly.</li>
+</ul>
+</div>
+<div class="section" id="things-it-should-be-able-to-do-in-time">
+<h2>Things it should be able to do (in time)</h2>
+<ul class="simple">
+<li>Have basic image flattening utility fuctions.</li>
+<li>Have unified header dictionaries between grid and scan files. The formats Nanonis saves grid and scan information in is quite different and up until now I have been to lazy to try to normalize it a bit.</li>
+<li>More gracefully handle incomplete/non-square data.</li>
+<li>Have docs? just to describe things in a minimal way.</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation</h2>
+<p>In the continued theme of I don't know what I'm doing, I uploaded <code>nanonispy</code> to <a class="reference external" href="https://pypi.python.org/pypi/nanonispy/1.0.1">pypi</a>, <a class="reference external" href="https://anaconda.org/underchemist/nanonispy">conda</a>, and of course <a class="reference external" href="https://github.com/underchemist/nanonispy">github</a>. So there several, I think all fairly easy ways of installing the program. The easiest, or at least in the sense of not presuming much of anything of your development environment, is with setup.py:</p>
+<div class="highlight"><pre><span></span>$ git clone git@github.com:underchemist/nanonispy.git
+$ python setup.py install
+</pre></div>
+<p>However most people will have one of pip or conda installed (if not both). This makes it even simpler and all that is required to download the source code and install it is:</p>
+<div class="highlight"><pre><span></span>$ pip install nanonispy
+</pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span>$ conda install -c https://conda.anaconda.org/underchemist nanonispy
+</pre></div>
+<p>and you're good to go!</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage</h2>
+<p>I tend to explore my data a bit in an ipython/jupyter console, which is sort of how I developed the code. However it's just as easy to start scripting away since the library is pretty small and only requires you to do one thing: Initialize!</p>
+<p>A typical script using for <code>nanonispy</code> might start out like:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nanonispy</span> <span class="kn">as</span> <span class="nn">nap</span>  <span class="c1"># what I found convenient, up to you</span>
+
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;/path/to/my/big/important/stm/data.3ds&#39;</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">nap</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">Grid</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
+<span class="n">fname2</span> <span class="o">=</span> <span class="s1">&#39;/path/to/my/less/important/stm/scan.sxm&#39;</span>
+<span class="n">scan</span> <span class="o">=</span> <span class="n">nap</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">Scan</span><span class="p">(</span><span class="n">fname2</span><span class="p">)</span>
+
+<span class="n">fname3</span> <span class="o">=</span> <span class="s1">&#39;/path/to/spectroscopy/data.dat&#39;</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="n">nap</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">Spec</span><span class="p">(</span><span class="n">fname3</span><span class="p">)</span>
+</pre></div>
+<p>Now you have 3 class objects initialized with all their data and header information avaible as class attributes! Analyze away.</p>
+<hr class="docutils" />
+<p>Friedel oscillations on Ag(111)... yummy!</p>
+<img alt="sailing the Fermi seas" class="align-center" src="/images/friedel-ag111.png" style="width: 100%;" />
+</div>
+
+    </article>
+
+        <div class="tags">
+            <p>tags: <a href="http://ysebastien.me/tag/python.html">python</a></p>
+        </div>
+
+    <hr>
+
+        <div class="comments">
+            <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'ysebastien-me';
+                var disqus_identifier = 'nanonispy-my-first-python-package.html';
+                var disqus_url = 'http://ysebastien.me/nanonispy-my-first-python-package.html';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//ysebastien-me.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://twitter.com/underchemist">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/underchemist">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                    </ul>
+<p class="copyright text-muted">
+    Blog powered by <a href="http://getpelican.com">Pelican</a>,
+    which takes great advantage of <a href="http://python.org">Python</a>. <br />        &copy;  Yann-Sebastien
+</p>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="http://ysebastien.me/theme/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://ysebastien.me/theme/js/bootstrap.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="http://ysebastien.me/theme/js/clean-blog.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112502837-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112502837-1');
+</script>
+<script type="text/javascript">
+    var disqus_shortname = 'ysebastien-me';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+
+</html>
